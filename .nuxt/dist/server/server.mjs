@@ -1,0 +1,1 @@
+export { default } from "file:///C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
