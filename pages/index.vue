@@ -30,24 +30,18 @@
         <h2 class="text-2xl font-semibold">POPULAR BOOKS</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
           <PopularBook v-for="book in popularBooks" :key="book.id" :book="book" />
+          <Bookcard />
+
         </div>
       </section>
   
-      <!-- Footer -->
-      <footer class="bg-gray-900 text-white text-center py-4 mt-12">
-        <p>Rue des Palais 70, 1030 Brussels | Site: Lukas@gmail.com</p>
-        <div class="mt-2 text-sm">
-          <NuxtLink to="/privacy" class="underline">Privacy policy</NuxtLink> |
-          <NuxtLink to="/cookies" class="underline">Cookies policy</NuxtLink>
-        </div>
-      </footer>
+     
     </div>
   </template>
   
   <script setup>
   import { ref } from 'vue';
-  import BookCard from '@/components/BookCard.vue';
-  import PopularBook from '@/components/PopularBook.vue';
+
   
   const recommendedBooks = ref([
     { id: 1, title: 'Book 1', author: 'Author', image: '@/assets/images/5.jpg' },

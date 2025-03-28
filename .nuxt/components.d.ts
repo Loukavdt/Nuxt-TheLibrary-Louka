@@ -2,10 +2,12 @@
 import type { DefineComponent, SlotsType } from 'vue'
 type IslandComponent<T extends DefineComponent> = T & DefineComponent<{}, {refresh: () => Promise<void>}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, SlotsType<{ fallback: { error: unknown } }>>
 interface _GlobalComponents {
-      'ColorMode': typeof import("../components/ColorMode.vue")['default']
+      'Bookcard': typeof import("../components/Bookcard.vue")['default']
+    'ColorMode': typeof import("../components/ColorMode.vue")['default']
     'Drawer': typeof import("../components/Drawer.vue")['default']
     'Footer': typeof import("../components/Footer.vue")['default']
     'Navigation': typeof import("../components/Navigation.vue")['default']
+    'PopularBook': typeof import("../components/PopularBook.vue")['default']
     'TitleBlock': typeof import("../components/TitleBlock.vue")['default']
     'NuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome")['default']
     'NuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -31,10 +33,12 @@ interface _GlobalComponents {
     'Body': typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
     'NuxtIsland': typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
     'NuxtRouteAnnouncer': IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
-      'LazyColorMode': typeof import("../components/ColorMode.vue")['default']
+      'LazyBookcard': typeof import("../components/Bookcard.vue")['default']
+    'LazyColorMode': typeof import("../components/ColorMode.vue")['default']
     'LazyDrawer': typeof import("../components/Drawer.vue")['default']
     'LazyFooter': typeof import("../components/Footer.vue")['default']
     'LazyNavigation': typeof import("../components/Navigation.vue")['default']
+    'LazyPopularBook': typeof import("../components/PopularBook.vue")['default']
     'LazyTitleBlock': typeof import("../components/TitleBlock.vue")['default']
     'LazyNuxtWelcome': typeof import("../node_modules/nuxt/dist/app/components/welcome")['default']
     'LazyNuxtLayout': typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -74,10 +78,12 @@ declare module 'vue' {
   export interface GlobalComponents extends _GlobalComponents { }
 }
 
+export const Bookcard: typeof import("../components/Bookcard.vue")['default']
 export const ColorMode: typeof import("../components/ColorMode.vue")['default']
 export const Drawer: typeof import("../components/Drawer.vue")['default']
 export const Footer: typeof import("../components/Footer.vue")['default']
 export const Navigation: typeof import("../components/Navigation.vue")['default']
+export const PopularBook: typeof import("../components/PopularBook.vue")['default']
 export const TitleBlock: typeof import("../components/TitleBlock.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
@@ -103,10 +109,12 @@ export const Html: typeof import("../node_modules/nuxt/dist/head/runtime/compone
 export const Body: typeof import("../node_modules/nuxt/dist/head/runtime/components")['Body']
 export const NuxtIsland: typeof import("../node_modules/nuxt/dist/app/components/nuxt-island")['default']
 export const NuxtRouteAnnouncer: IslandComponent<typeof import("../node_modules/nuxt/dist/app/components/server-placeholder")['default']>
+export const LazyBookcard: typeof import("../components/Bookcard.vue")['default']
 export const LazyColorMode: typeof import("../components/ColorMode.vue")['default']
 export const LazyDrawer: typeof import("../components/Drawer.vue")['default']
 export const LazyFooter: typeof import("../components/Footer.vue")['default']
 export const LazyNavigation: typeof import("../components/Navigation.vue")['default']
+export const LazyPopularBook: typeof import("../components/PopularBook.vue")['default']
 export const LazyTitleBlock: typeof import("../components/TitleBlock.vue")['default']
 export const LazyNuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome")['default']
 export const LazyNuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']

@@ -1,17 +1,12 @@
 <template>
-    <div class="text-xs mt-10">
-        <hr>
-        <div class="flex">
-            <div class=" flex-none basis-11/12"><ColorMode /></div>
-            <div class="flex-1 basis-1/12">
-                <NuxtLink to="https://github.com/bureaupixel/Nuxt-collections" target="_blank">
-                    <GithubIcon />
-                </NuxtLink>    
-            </div>
+    <div>
+ <!-- Footer -->
+ <footer class="bg-gray-900 text-white text-center py-4 mt-12">
+        <p>Rue des Palais 70, 1030 Brussels | Site: Lukas@gmail.com</p>
+        <div class="mt-2 text-sm">
+          <NuxtLink to="/privacy" class="underline">Privacy policy</NuxtLink> |
+          <NuxtLink to="/cookies" class="underline">Cookies policy</NuxtLink> <NuxtLink to="/login" class="underline">login</NuxtLink>
         </div>
+      </footer>
     </div>
 </template>
-
-<script setup lang="ts">
-  import GithubIcon from 'vue-material-design-icons/Github.vue'
-</script>
