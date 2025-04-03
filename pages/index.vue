@@ -24,8 +24,12 @@
   
       <!-- Recommended Books -->
       <section class="container mx-auto px-4 py-12">
-        <h2 class="text-2xl font-semibold">RECOMMENDED</h2>
+        <h2 class="text-2xl font-semibold">RECOMMENDED BOOKS</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-4">
+          <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
+          <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
+          <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
+          <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
           <BookCard v-for="book in recommendedBooks" :key="book.id" :book="book" />
         </div>
       </section>
@@ -34,11 +38,14 @@
       <section class="container mx-auto px-4 py-12">
         <h2 class="text-2xl font-semibold">POPULAR BOOKS</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
-          <PopularBook v-for="book in popularBooks" :key="book.id" :book="book" />
-          <Bookcard />
-
+        <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
+        <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
+        <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
+        <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
+        <PopularBook v-for="book in popularBooks" :key="book.id" :book="book" />
+        <Bookcard />
         </div>
-      </section>
+        </section>
   
      
     </div>
