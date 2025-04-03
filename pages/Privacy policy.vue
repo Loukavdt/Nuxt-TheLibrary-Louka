@@ -1,5 +1,5 @@
 <template>
     <div>
-        Privacy policy page
+        Privacy ploicy page
     </div>
 </template>
