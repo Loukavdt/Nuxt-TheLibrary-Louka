@@ -1,5 +1,5 @@
 <template>
     <div>
-        Bookcardkyfjfddhygd
+        Bookcard
     </div>
 </template>

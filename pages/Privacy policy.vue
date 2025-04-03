@@ -1,5 +1,5 @@
 <template>
     <div>
-        popular books
+        Privacy policy page
     </div>
 </template>
