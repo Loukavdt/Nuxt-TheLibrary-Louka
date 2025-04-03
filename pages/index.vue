@@ -5,10 +5,13 @@
         <div>
           <h1 class="text-3xl font-bold">DISCOVER THE NEW ARRIVALS</h1>
           <p class="mt-4 text-gray-700">
-            Exciting news for students! Our library has new books on urban planning, interior design,
-            sustainable architecture, fine arts, and more. Explore visionary architecture, curated interiors,
-            smart city planning, graphic design, and contemporary art. Visit us or browse online to
-            reserve your favorites. Happy reading and creating!
+            Exciting news for students! Our library has recently added a wide variety of new books
+            covering urban planning, interior design, sustainable architecture, fine arts, and so much more.
+            Dive into the world of visionary architecture, discover curated interior design ideas,
+            learn about the future of smart city planning, explore innovative graphic design techniques,
+            and immerse yourself in contemporary art trends. Whether you prefer to visit us in person
+            or browse online, there's something for everyone. Be sure to reserve your favorite titles
+            and stay inspired. Happy reading and creating!
           </p>
           <button class="mt-4 bg-red-600 text-white px-6 py-2 rounded-lg">See More</button>
           </div>
