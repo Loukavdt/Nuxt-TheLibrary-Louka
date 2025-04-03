@@ -14,7 +14,7 @@
           </div>
 
           
-        <div class="grid grid-cols-1 gap-2">
+        <div class="grid grid-cols-2 gap-8">
           <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
           <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
           <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
