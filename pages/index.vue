@@ -3,6 +3,7 @@
       <!-- New Arrivals Section -->
       <section class="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
+          <NuxtLink to="/Login" >Login</NuxtLink>
           <h1 class="text-3xl font-bold">DISCOVER THE NEW ARRIVALS</h1>
           <p class="mt-4 text-gray-700">
             Exciting news for students! Our library has recently added a wide variety of new books
@@ -24,7 +25,7 @@
           <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
         </div>
       </section>
-  
+
       <!-- Recommended Books -->
       <section class="container mx-auto px-4 py-12">
         <h2 class="text-2xl font-semibold">RECOMMENDED BOOKS</h2>
