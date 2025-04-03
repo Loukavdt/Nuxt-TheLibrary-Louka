@@ -3,10 +3,10 @@
       <div class="left-section">
         <h1 class="welcome-text">{{ translations[language].welcome }}</h1>
         <p class="subtext">{{ translations[language].message }}</p>
-        <button @click="goToLogin" class="btn">
+        <button @click="goToSignup" class="btn">
           {{ translations[language].login }}
         </button>
-        <button @click="goToSignup" class="btn">
+        <button @click="goToLogin" class="btn">
           {{ translations[language].signup }}
         </button>
   
@@ -30,7 +30,7 @@
           en: {
             welcome: "Welcome",
             message: "Ready for your next adventure? Log in and let’s go!",
-            login: "Sign up",
+            login: "Sign up", 
             signup: "Log in",
           },
           nl: {
@@ -49,11 +49,11 @@
       };
     },
     methods: {
-      goToLogin() {
-        window.location.href = "http://localhost:3000/login";
-      },
       goToSignup() {
         window.location.href = "http://localhost:3000/signup";
+      },
+      goToLogin() {
+        window.location.href = "http://localhost:3000/login";
       },
       changeLanguage(lang) {
         this.language = lang;
