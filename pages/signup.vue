@@ -14,10 +14,10 @@
         <button 
           v-for="role in roles" :key="role.name"
           @click="selectedRole = role.name"
-          :class="[
-            'px-4 py-1 rounded-full text-white font-semibold',
+          :class="[ 
+            'px-4 py-1 rounded-full text-white font-semibold', 
             selectedRole === role.name ? 'bg-gray-900' : role.bgColor,
-            textSize // Dynamically apply the textSize class
+            textSize // Dynamically apply the textSize class 
           ]">
           {{ role.name }}
         </button>
@@ -42,7 +42,7 @@
 
       <p class="text-center mt-4 text-sm">
         Already have an account? 
-        <NuxtLink to="/login" class="text-red-800 font-semibold">Log in</NuxtLink>
+        <NuxtLink to="/login2" class="text-red-800 font-semibold">Log in</NuxtLink>
       </p>
     </div>
   </div>
