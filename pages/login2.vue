@@ -15,13 +15,13 @@
           v-for="role in roles" :key="role.name"
           @click="selectedRole = role.name"
           :class="[
-            'px-4 py-1 rounded-full text-1xl text-white font-semibold',
-            selectedRole === role.name ? 'bg-gray-900' : role.bgColor
+            'px-4 py-1 rounded-full text-white font-semibold',
+            selectedRole === role.name ? 'bg-gray-900' : role.bgColor,
+            textSize // Dynamically apply the textSize class
           ]">
           {{ role.name }}
         </button>
       </div>
-
 
       <form @submit.prevent="goToHomePage" class="space-y-4">
         <input type="email" placeholder="Enter E-mail" class="input-field" />
@@ -29,13 +29,12 @@
         <input type="password" placeholder="Repeat Password" class="input-field" />
 
         <div class="flex items-center justify-between text-sm text-gray-700">
-  <div class="flex items-center">
-    <input type="checkbox" id="policy" class="mr-2" />
-    <label for="policy">Remember me</label>
-  </div>
-  <NuxtLink to="/forgot-password" class="text-red-700 hover:underline">Forgot password?</NuxtLink>
-</div>
-
+          <div class="flex items-center">
+            <input type="checkbox" id="policy" class="mr-2" />
+            <label for="policy">Remember me</label>
+          </div>
+          <NuxtLink to="/forgot-password" class="text-red-700 hover:underline">Forgot password?</NuxtLink>
+        </div>
 
         <button type="submit" class="w-full bg-red-800 text-white py-2 rounded-full hover:bg-red-700">
           Log in
@@ -54,20 +53,23 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 
-// Router instance voor navigatie
+// Router instance for navigation
 const router = useRouter();
 
-// Geselecteerde rol (standaard "STUDENT")
+// Selected role (default "STUDENT")
 const selectedRole = ref("STUDENT");
 
-// Rollen opties
+// Role options
 const roles = [
   { name: "STUDENT", bgColor: "bg-red-700" },
   { name: "TEACHER", bgColor: "bg-blue-700" },
   { name: "EXTERNAL", bgColor: "bg-green-700" },
 ];
 
-// Navigeren naar de index.vue pagina
+// Font size class for roles (use 'text-xs' for smaller text)
+const textSize = 'text-xs'; // Change this to 'text-sm', 'text-base', 'text-lg', or 'text-xl' as needed
+
+// Navigate to home page
 const goToHomePage = () => {
   router.push("/");
 };
