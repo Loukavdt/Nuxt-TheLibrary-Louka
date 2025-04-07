@@ -10,7 +10,7 @@
       </NuxtLink>
 
       <!-- Vervangen van button met NuxtLink voor login -->
-      <NuxtLink to="/login" class="btn">
+      <NuxtLink to="/login2" class="btn">
         {{ translations[language].signup }}
       </NuxtLink>
 
