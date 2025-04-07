@@ -1,21 +1,3 @@
-/* Body element */
-body {
-    background-color: #fff;
-    color: rgba(0,0,0,0.8);
-    }
-    .light-mode body {
-    background-color: #e2e3e5;
-    color: #161717;
-    }
-    .dark-mode body {
-    background-color: #161715;
-    color: #ebf4f1;
-    }
-    .gray-mode body {
-    background-color: #ffffff;
-    color: #433422;
-    }
-    
     /* Active link */
     .router-link-active {
     border-bottom: 2px solid gray;
