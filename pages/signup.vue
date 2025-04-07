@@ -1,8 +1,11 @@
 <template>
   <div class="min-h-screen flex items-center justify-center bg-gradient-to-r from-red-800 to-gray-300">
     <div class="bg-white p-10 rounded-lg shadow-lg w-full max-w-md">
+      
       <!-- Back knop -->
-      <button @click="$router.back()" class="text-red-800 mb-4 text-lg">←</button>
+      <button @click="$router.back()" class="text-red-800 mb-4 text-4xl font-bold leading-none">
+        ←
+      </button>
       
       <h1 class="text-4xl font-bold text-center text-red-800 mb-6">Get Started</h1>
 
@@ -12,12 +15,13 @@
           v-for="role in roles" :key="role.name"
           @click="selectedRole = role.name"
           :class="[
-            'px-4 py-1 rounded-full text-white font-semibold',
+            'px-4 py-1 rounded-full text-1xl text-white font-semibold',
             selectedRole === role.name ? 'bg-gray-900' : role.bgColor
           ]">
           {{ role.name }}
         </button>
       </div>
+
 
       <form @submit.prevent="goToHomePage" class="space-y-4">
         <input type="text" placeholder="Enter First name" class="input-field" />
