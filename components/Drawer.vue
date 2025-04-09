@@ -97,22 +97,22 @@ const closeDrawer = () => {
         <!-- Navigation links -->
         <div class="space-y-3">
           <!-- Group 1 -->
-          <NuxtLink to="/" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
+          <NuxtLink to="/" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-red-500">
             HOME
           </NuxtLink>
-          <NuxtLink to="/recent" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
+          <NuxtLink to="/recent" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-red-500">
             RECENT
           </NuxtLink>
-          <NuxtLink to="/collections" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
+          <NuxtLink to="/collections" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-red-500">
             COLLECTIONS
           </NuxtLink>
-          <NuxtLink to="/favorites" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
+          <NuxtLink to="/favorites" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-red-500">
             FAVORITES
           </NuxtLink>
-          <NuxtLink to="/language" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
+          <NuxtLink to="/language" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-red-500">
             LANGUAGE
           </NuxtLink>
-          <NuxtLink to="/personal-collections" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
+          <NuxtLink to="/personal-collections" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-red-500">
             PERSONAL COLLECTIONS
           </NuxtLink>
 
@@ -120,10 +120,10 @@ const closeDrawer = () => {
           <div class="h-14"></div>
 
           <!-- Group 2 -->
-          <NuxtLink to="/about-us" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
+          <NuxtLink to="/about-us" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-red-500">
             ABOUT US
           </NuxtLink>
-          <NuxtLink to="/contact-us" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
+          <NuxtLink to="/contact-us" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-red-500">
             CONTACT US
           </NuxtLink>
         </div>
@@ -151,5 +151,10 @@ a.router-link-exact-active {
   border: none !important;
   text-decoration: none !important;
   color: inherit !important;
+}
+
+/* Optional: If you want to apply more custom styles */
+.hover\:text-red-500:hover {
+  color: red !important;
 }
 </style>
