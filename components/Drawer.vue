@@ -86,7 +86,11 @@ const closeDrawer = () => {
 
       <!-- Drawer Content -->
       <div class="mt-2 mb-5">
-        <TitleBlock />
+        <!-- TitleBlock -->
+        <div class="text-xl font-semibold text-gray-800 dark:text-white">LOUKA VAN DER TAELEN</div>
+        <!-- SubTitleBlock -->
+        <div class="text--1xl font-semibold text-gray-800 dark:text-white">STUDENT</div>
+        <!-- Navigation links go here -->
         <Navigation />
       </div>
 
