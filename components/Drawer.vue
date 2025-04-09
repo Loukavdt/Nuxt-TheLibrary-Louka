@@ -90,8 +90,34 @@ const closeDrawer = () => {
         <div class="text-xl font-semibold text-gray-800 dark:text-white">LOUKA VAN DER TAELEN</div>
         <!-- SubTitleBlock -->
         <div class="text--1xl font-semibold text-gray-800 dark:text-white">STUDENT</div>
+
         <!-- Navigation links go here -->
-        <Navigation />
+        <div class="mt-4 space-y-3">
+          <NuxtLink to="/" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
+            Home
+          </NuxtLink>
+          <NuxtLink to="/recent" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
+            Recent
+          </NuxtLink>
+          <NuxtLink to="/collections" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
+            Collections
+          </NuxtLink>
+          <NuxtLink to="/favorites" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
+            Favorites
+          </NuxtLink>
+          <NuxtLink to="/language" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
+            Language
+          </NuxtLink>
+          <NuxtLink to="/personal-collections" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
+            Personal Collections
+          </NuxtLink>
+          <NuxtLink to="/about-us" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
+            About Us
+          </NuxtLink>
+          <NuxtLink to="/contact-us" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
+            Contact Us
+          </NuxtLink>
+        </div>
       </div>
 
       <div class="mt-5 mb-5">
