@@ -1,30 +1,42 @@
 <template>
   <div class="bg-gray-100 text-gray-900">
-    
+    <!-- Cookie Consent Modal -->
+    <div 
+      v-if="showCookieModal" 
+      class="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50"
+    >
+      <div class="bg-white p-12 rounded-lg shadow-lg w-11/12 max-w-xl">
+        <h2 class="text-3xl font-semibold mb-6 text-center">Our website uses cookies</h2>
+        <p class="text-1xl text-gray-700 mb-8 text-center">
+          Our website uses cookies. By continuing, we assume your permission to deploy cookies as detailed in our Privacy Policy.
+        </p>
+        <!-- Buttons Section -->
+        <div class="flex flex-col justify-center items-center space-y-4">
+          <button 
+            class="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-500 text-lg w-full md:w-auto" 
+            @click="acceptCookies"
+          >
+            Accept cookies
+          </button>
+          <button 
+            class="bg-gray-500 text-white px-8 py-3 rounded-lg hover:bg-gray-400 text-lg w-full md:w-auto" 
+            @click="declineCookies"
+          >
+            Decline cookies
+          </button>
+        </div>
+      </div>
+    </div>
+
     <!-- Top Navigation Bar -->
     <header class="bg-white shadow px-4 py-3 flex items-center justify-end">
-      <!-- Search Bar -->
-      <div class="flex items-center space-x-2 mr-6">
-        <input 
-          type="text" 
-          placeholder="Search books" 
-          class="w-72 py-1.5 pl-4 pr-4 bg-gray-700 text-white placeholder-white rounded-full focus:outline-none focus:ring-2 focus:ring-red-400"
-        />
-      </div>
-
-      <!-- Icon Buttons -->
       <div class="flex items-center space-x-6 text-gray-700">
-        <!-- Cart Icon Button -->
         <NuxtLink to="/cart" class="hover:text-red-600">
           <ShoppingCartIcon class="w-6 h-6" />
         </NuxtLink>
-
-        <!-- Notifications Icon Button -->
         <NuxtLink to="/notifications" class="hover:text-red-600">
           <BellIcon class="w-6 h-6" />
         </NuxtLink>
-
-        <!-- Profile Icon Button -->
         <NuxtLink to="/profile" class="hover:text-red-600">
           <UserIcon class="w-6 h-6" />
         </NuxtLink>
@@ -79,11 +91,13 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue';
+import { ShoppingCartIcon, BellIcon, UserIcon } from '@heroicons/vue/24/solid';
 
-// Heroicons imports
-import { ShoppingCartIcon, BellIcon, UserIcon } from '@heroicons/vue/24/solid'
+// State to show the cookie modal
+const showCookieModal = ref(true); // Set to true to show on every visit
 
+// Books data (can be dynamic or static as needed)
 const recommendedBooks = ref([
   { id: 1, title: 'The Art of Design', author: 'John Doe' },
   { id: 2, title: 'Sustainable Living', author: 'Jane Smith' },
@@ -97,10 +111,35 @@ const popularBooks = ref([
   { id: 7, title: 'The Future of Cities', author: 'David Martinez' },
   { id: 8, title: 'Fine Arts Today', author: 'Sophia Taylor' }
 ]);
+
+// Accept cookies action (hides the modal)
+const acceptCookies = () => {
+  showCookieModal.value = false;
+};
+
+// Decline cookies action (hides the modal)
+const declineCookies = () => {
+  showCookieModal.value = false;
+};
 </script>
 
 <style scoped>
-button:hover {
-  background-color: #b91c1c;
+.bg-opacity-50 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.w-11-12 {
+  width: 92%;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* For mobile responsiveness */
+@media (max-width: 640px) {
+  .w-full {
+    width: 100%;
+  }
 }
 </style>
