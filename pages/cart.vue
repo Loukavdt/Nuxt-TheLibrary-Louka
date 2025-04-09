@@ -26,7 +26,7 @@
     </header>
 
     <!-- Padding to push down content below the fixed header -->
-    <div class="h-20"></div>
+    <div class="h-4"></div>
 
     <!-- Cart Content -->
     <section class="container mx-auto px-4 py-12 mt-24">
@@ -40,7 +40,7 @@
           @click="toggleSelection(1)"
           :class="{'border-4 border-red-600': selectedBooks.includes(1)}"
         >
-        <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
+          <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
           <div class="mt-4">
             <h3 class="text-xl font-semibold">Title</h3>
             <p class="text-gray-700 mt-1">Author</p>
@@ -53,7 +53,7 @@
           @click="toggleSelection(2)"
           :class="{'border-4 border-red-600': selectedBooks.includes(2)}"
         >
-        <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
+          <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
           <div class="mt-4">
             <h3 class="text-xl font-semibold">Title</h3>
             <p class="text-gray-700 mt-1">Author</p>
@@ -66,7 +66,7 @@
           @click="toggleSelection(3)"
           :class="{'border-4 border-red-600': selectedBooks.includes(3)}"
         >
-        <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
+          <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
           <div class="mt-4">
             <h3 class="text-xl font-semibold">Title</h3>
             <p class="text-gray-700 mt-1">Author</p>
@@ -79,7 +79,7 @@
           @click="toggleSelection(4)"
           :class="{'border-4 border-red-600': selectedBooks.includes(4)}"
         >
-        <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
+          <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
           <div class="mt-4">
             <h3 class="text-xl font-semibold">Title</h3>
             <p class="text-gray-700 mt-1">Author</p>
@@ -92,7 +92,7 @@
           @click="toggleSelection(5)"
           :class="{'border-4 border-red-600': selectedBooks.includes(5)}"
         >
-        <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
+          <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
           <div class="mt-4">
             <h3 class="text-xl font-semibold">Title</h3>
             <p class="text-gray-700 mt-1">Author</p>
@@ -105,7 +105,7 @@
           @click="toggleSelection(6)"
           :class="{'border-4 border-red-600': selectedBooks.includes(6)}"
         >
-        <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
+          <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
           <div class="mt-4">
             <h3 class="text-xl font-semibold">Title</h3>
             <p class="text-gray-700 mt-1">Author</p>

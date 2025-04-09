@@ -26,7 +26,7 @@
     </header>
 
     <!-- Padding to push down content below the fixed header -->
-    <div class="h-20"></div>
+    <div class="h-4"></div>
 
     <!-- Content for the Profile Page -->
     <section class="container mx-auto px-4 py-12 mt-24">
