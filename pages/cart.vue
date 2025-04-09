@@ -4,8 +4,8 @@
     <header class="bg-white shadow px-4 py-3 flex items-center justify-end top-0 left-0 right-0 z-50 fixed">
       <!-- Search Bar -->
       <div class="relative mr-6 border-gray-300 rounded-lg w-72">
-        <input 
-          type="text" 
+        <input
+          type="text"
           placeholder="Search books"
           class="w-full pl-8 pr-3 py-2 outline-none text-gray-800"
         />
@@ -29,30 +29,106 @@
     <!-- Padding to push down content below the fixed header -->
     <div class="h-20"></div>
 
-    <!-- Content for the Notifications Page -->
+    <!-- Cart Content -->
     <section class="container mx-auto px-4 py-12 mt-24">
-      <h1 class="text-3xl font-semibold">Your Notifications</h1>
-      <div class="mt-8">
-        <div class="bg-white shadow rounded-lg p-6 mb-4">
-          <h3 class="text-xl font-semibold">New Book Arrivals!</h3>
-          <p class="text-gray-700 mt-2">Check out the new collection of books available in the library. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam.</p>
+      <h1 class="text-3xl font-semibold">Your Shopping Cart</h1>
+
+      <!-- Books Grid: 3 books per row -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
+        <!-- Book Item 1 -->
+        <div
+          class="bg-white shadow rounded-lg p-6 cursor-pointer hover:scale-105 transition-transform"
+          @click="toggleSelection(1)"
+          :class="{'border-4 border-red-600': selectedBooks.includes(1)}"
+        >
+          <img src="https://via.placeholder.com/150" alt="Book Image" class="w-full h-32 object-cover rounded-md" />
+          <div class="mt-4">
+            <h3 class="text-xl font-semibold">Title</h3>
+            <p class="text-gray-700 mt-1">Author</p>
+          </div>
         </div>
-        <div class="bg-white shadow rounded-lg p-6 mb-4">
-          <h3 class="text-xl font-semibold">Upcoming Event</h3>
-          <p class="text-gray-700 mt-2">Don't miss our upcoming event on urban design next week. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo. Maecenas malesuada. Nunc sed lectus. Nulla facilisi.</p>
+
+        <!-- Book Item 2 -->
+        <div
+          class="bg-white shadow rounded-lg p-6 cursor-pointer hover:scale-105 transition-transform"
+          @click="toggleSelection(2)"
+          :class="{'border-4 border-red-600': selectedBooks.includes(2)}"
+        >
+          <img src="https://via.placeholder.com/150" alt="Book Image" class="w-full h-32 object-cover rounded-md" />
+          <div class="mt-4">
+            <h3 class="text-xl font-semibold">Title</h3>
+            <p class="text-gray-700 mt-1">Author</p>
+          </div>
         </div>
-        <div class="bg-white shadow rounded-lg p-6 mb-4">
-          <h3 class="text-xl font-semibold">Library Update</h3>
-          <p class="text-gray-700 mt-2">The library will be closed for maintenance on Monday. Duis ultricies pharetra magna. Integer sit amet est. Mauris malesuada orci turpis, vel interdum nisl sollicitudin at. Nulla facilisi. Vivamus feugiat elit at urna cursus tempus.</p>
+
+        <!-- Book Item 3 -->
+        <div
+          class="bg-white shadow rounded-lg p-6 cursor-pointer hover:scale-105 transition-transform"
+          @click="toggleSelection(3)"
+          :class="{'border-4 border-red-600': selectedBooks.includes(3)}"
+        >
+          <img src="https://via.placeholder.com/150" alt="Book Image" class="w-full h-32 object-cover rounded-md" />
+          <div class="mt-4">
+            <h3 class="text-xl font-semibold">Title</h3>
+            <p class="text-gray-700 mt-1">Author</p>
+          </div>
         </div>
-        <div class="bg-white shadow rounded-lg p-6 mb-4">
-          <h3 class="text-xl font-semibold">Book Reservation Reminder</h3>
-          <p class="text-gray-700 mt-2">Your book reservation for "Sustainable Architecture" is ready for pickup. Aenean imperdiet. Fusce malesuada tristique nulla. Suspendisse potenti. Phasellus at erat. Sed cursus ante dapibus diam. Sed nisi.</p>
+
+        <!-- Book Item 4 -->
+        <div
+          class="bg-white shadow rounded-lg p-6 cursor-pointer hover:scale-105 transition-transform"
+          @click="toggleSelection(4)"
+          :class="{'border-4 border-red-600': selectedBooks.includes(4)}"
+        >
+          <img src="https://via.placeholder.com/150" alt="Book Image" class="w-full h-32 object-cover rounded-md" />
+          <div class="mt-4">
+            <h3 class="text-xl font-semibold">Title</h3>
+            <p class="text-gray-700 mt-1">Author</p>
+          </div>
         </div>
-        <div class="bg-white shadow rounded-lg p-6 mb-4">
-          <h3 class="text-xl font-semibold">New Library Hours</h3>
-          <p class="text-gray-700 mt-2">The library's new hours are now in effect. Our new schedule: Monday - Friday, 9 AM - 6 PM. Vestibulum ut elit a purus vehicula dictum. Nulla at malesuada nisi. Integer nec odio. Praesent libero.</p>
+
+        <!-- Book Item 5 -->
+        <div
+          class="bg-white shadow rounded-lg p-6 cursor-pointer hover:scale-105 transition-transform"
+          @click="toggleSelection(5)"
+          :class="{'border-4 border-red-600': selectedBooks.includes(5)}"
+        >
+          <img src="https://via.placeholder.com/150" alt="Book Image" class="w-full h-32 object-cover rounded-md" />
+          <div class="mt-4">
+            <h3 class="text-xl font-semibold">Title</h3>
+            <p class="text-gray-700 mt-1">Author</p>
+          </div>
         </div>
+
+        <!-- Book Item 6 -->
+        <div
+          class="bg-white shadow rounded-lg p-6 cursor-pointer hover:scale-105 transition-transform"
+          @click="toggleSelection(6)"
+          :class="{'border-4 border-red-600': selectedBooks.includes(6)}"
+        >
+          <img src="https://via.placeholder.com/150" alt="Book Image" class="w-full h-32 object-cover rounded-md" />
+          <div class="mt-4">
+            <h3 class="text-xl font-semibold">Title</h3>
+            <p class="text-gray-700 mt-1">Author</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Selected Books Summary and Borrow Button in a Smaller Rectangle (Aligned Right) -->
+      <div class="bg-white shadow rounded-lg p-4 mt-8 flex justify-between items-center max-w-4xl mx-auto sm:mx-0 sm:ml-auto">
+        <!-- Left side: Books Selected -->
+        <div class="flex items-center space-x-1"> <!-- Reduced space-x from 2 to 1 -->
+          <p class="text-lg font-semibold">Books Selected:</p>
+          <p class="text-xl font-semibold text-red-600">{{ selectedBooks.length }}</p>
+        </div>
+
+        <!-- Right side: Borrow Button -->
+        <button
+          class="bg-red-600 text-white px-8 py-2 rounded-lg hover:bg-red-700 text-lg"
+          @click="borrowBooks"
+        >
+          Borrow
+        </button>
       </div>
     </section>
   </div>
@@ -61,6 +137,23 @@
 <script setup>
 import { ref } from 'vue'
 import { ShoppingCartIcon, BellIcon, UserIcon, MagnifyingGlassIcon } from '@heroicons/vue/24/solid'
+
+// To track the selected books
+const selectedBooks = ref([])
+
+// Function to toggle book selection on click
+const toggleSelection = (bookId) => {
+  if (selectedBooks.value.includes(bookId)) {
+    selectedBooks.value = selectedBooks.value.filter(id => id !== bookId)
+  } else {
+    selectedBooks.value.push(bookId)
+  }
+}
+
+// Function for borrowing books
+const borrowBooks = () => {
+  alert(`You have borrowed ${selectedBooks.value.length} book(s).`)
+}
 </script>
 
 <style scoped>
@@ -87,17 +180,33 @@ header {
   background-color: white;
 }
 
+/* Margin to prevent content overlap with fixed header */
 body {
-  padding-top: 80px; /* Adjust according to the header height */
+  padding-top: 80px;
 }
 
-/* Notification styles */
+/* Cart item styles */
 section {
   padding: 20px;
 }
 
-/* Add margin-top for the section to avoid overlap with the header */
-.mt-24 {
-  margin-top: 96px; /* Adjusted value to push content further down */
+/* Adjust the position for the rectangle with selected books and borrow button */
+.sm\:ml-auto {
+  margin-left: auto;
+}
+
+/* Reduce space between selected books label and borrow button */
+.space-x-1 {
+  gap: 0.25rem; /* Further reduced gap between text and number */
+}
+
+/* Decrease max width of the rectangle to make it more compact */
+.max-w-4xl {
+  max-width: 35rem; /* Reduced size */
+}
+
+/* Borrow button size adjustments */
+button {
+  padding: 0.5rem 2rem; /* Smaller button */
 }
 </style>
