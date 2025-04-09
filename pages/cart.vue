@@ -1,15 +1,14 @@
 <template>
   <div class="bg-gray-100 text-gray-900">
-    <!-- Top Navigation Bar (Fixed) -->
-    <header class="bg-white shadow px-4 py-3 flex items-center justify-end top-0 left-0 right-0 z-50 fixed">
+    <!-- Top Navigation Bar -->
+    <header class="bg-white shadow px-4 py-3 flex items-center justify-end">
       <!-- Search Bar -->
-      <div class="relative mr-6 border-gray-300 rounded-lg w-72">
-        <input
-          type="text"
-          placeholder="Search books"
-          class="w-full pl-8 pr-3 py-2 outline-none text-gray-800"
+      <div class="flex items-center space-x-2 mr-6">
+        <input 
+          type="text" 
+          placeholder="Search books" 
+          class="w-72 py-1.5 pl-4 pr-4 bg-gray-700 text-white placeholder-white rounded-full focus:outline-none focus:ring-2 focus:ring-red-400"
         />
-        <MagnifyingGlassIcon class="absolute left-2 top-1/2 transform -translate-y-1/2 w-5 h-5 text-gray-500" />
       </div>
 
       <!-- Icon Buttons -->
