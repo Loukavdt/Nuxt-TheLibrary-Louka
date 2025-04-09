@@ -40,7 +40,7 @@ const closeDrawer = () => {
 </script>
 
 <template>
-  <!-- Drawer toggle button: only shows when drawer is closed -->
+  <!-- Drawer toggle button -->
   <button
     v-if="!isDrawerOpen"
     id="drawer-show-button"
@@ -91,37 +91,42 @@ const closeDrawer = () => {
         <!-- SubTitleBlock -->
         <div class="text--1xl font-semibold text-gray-800 dark:text-white">STUDENT</div>
 
-        <!-- Navigation links go here -->
-        <div class="mt-4 space-y-3">
+        <!-- Spacer before nav links -->
+        <div class="h-14"></div>
+
+        <!-- Navigation links -->
+        <div class="space-y-3">
+          <!-- Group 1 -->
           <NuxtLink to="/" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
-            Home
+            HOME
           </NuxtLink>
           <NuxtLink to="/recent" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
-            Recent
+            RECENT
           </NuxtLink>
           <NuxtLink to="/collections" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
-            Collections
+            COLLECTIONS
           </NuxtLink>
           <NuxtLink to="/favorites" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
-            Favorites
+            FAVORITES
           </NuxtLink>
           <NuxtLink to="/language" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
-            Language
+            LANGUAGE
           </NuxtLink>
           <NuxtLink to="/personal-collections" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
-            Personal Collections
+            PERSONAL COLLECTIONS
           </NuxtLink>
+
+          <!-- Spacer between groups -->
+          <div class="h-14"></div>
+
+          <!-- Group 2 -->
           <NuxtLink to="/about-us" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
-            About Us
+            ABOUT US
           </NuxtLink>
           <NuxtLink to="/contact-us" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-blue-500">
-            Contact Us
+            CONTACT US
           </NuxtLink>
         </div>
-      </div>
-
-      <div class="mt-5 mb-5">
-        <Footer />
       </div>
     </div>
   </div>
@@ -129,7 +134,7 @@ const closeDrawer = () => {
 
 <style scoped>
 #drawer-swipe {
-  width: 50vw;
+  width: 21vw;
   z-index: 95;
   background-color: rgba(255, 255, 255, 0.98);
 }
@@ -138,11 +143,13 @@ const closeDrawer = () => {
   background-color: rgba(22, 23, 21, 0.95);
 }
 
-hr {
-  border-color: #D1D1D1;
+a {
+  text-decoration: none;
 }
 
-.dark-mode hr {
-  border-color: aliceblue;
+a.router-link-exact-active {
+  border: none !important;
+  text-decoration: none !important;
+  color: inherit !important;
 }
 </style>

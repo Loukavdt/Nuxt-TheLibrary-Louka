@@ -7,24 +7,24 @@
       <div class="flex items-center space-x-2 mr-6">
         <input 
           type="text" 
-          placeholder="Search books..." 
-          class="w-64 px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-red-400"
+          placeholder="Search books" 
+          class="w-72 py-1.5 pl-4 pr-4 bg-gray-700 text-white placeholder-white rounded-full focus:outline-none focus:ring-2 focus:ring-red-400"
         />
       </div>
 
       <!-- Icon Buttons -->
       <div class="flex items-center space-x-6 text-gray-700">
-        <!-- Cart Icon Button (Link to Cart Page) -->
+        <!-- Cart Icon Button -->
         <NuxtLink to="/cart" class="hover:text-red-600">
           <ShoppingCartIcon class="w-6 h-6" />
         </NuxtLink>
 
-        <!-- Notifications Icon Button (Link to Notifications Page) -->
+        <!-- Notifications Icon Button -->
         <NuxtLink to="/notifications" class="hover:text-red-600">
           <BellIcon class="w-6 h-6" />
         </NuxtLink>
 
-        <!-- Profile Icon Button (Link to Profile Page) -->
+        <!-- Profile Icon Button -->
         <NuxtLink to="/profile" class="hover:text-red-600">
           <UserIcon class="w-6 h-6" />
         </NuxtLink>
@@ -81,7 +81,7 @@
 <script setup>
 import { ref } from 'vue'
 
-// Import solid Heroicons
+// Heroicons imports
 import { ShoppingCartIcon, BellIcon, UserIcon } from '@heroicons/vue/24/solid'
 
 const recommendedBooks = ref([
