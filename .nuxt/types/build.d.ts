@@ -16,7 +16,7 @@ declare module "#build/color-mode-options.mjs";
 declare module "#build/element-plus-injection.plugin.mjs";
 declare module "#build/element-plus-teleports.plugin.mjs";
 declare module "#build/devtools/settings.mjs";
-declare module "#build/runtime.vue-devtools-client.Wo57eEuH5IlC5In7wBozNOWWdtpj6Zkc7og6prPcYI0.js";
+declare module "#build/runtime.vue-devtools-client.ZyAV2S8ZgMlFAdVldBL4w3jrjwcIr06ilKtmc60z0IA.js";
 declare module "#build/routes.mjs";
 declare module "#build/pages.mjs";
 declare module "#build/router.options.mjs";

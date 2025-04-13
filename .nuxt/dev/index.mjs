@@ -1,41 +1,41 @@
 import process from 'node:process';globalThis._importMeta_={url:import.meta.url,env:process.env};import { tmpdir } from 'node:os';
+import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, getRequestURL, getResponseHeader, getResponseStatus, createError, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, readBody, getQuery as getQuery$1, getResponseStatusText } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/h3/dist/index.mjs';
 import { Server } from 'node:http';
 import { resolve, dirname, join } from 'node:path';
 import nodeCrypto from 'node:crypto';
 import { parentPort, threadId } from 'node:worker_threads';
-import { defineEventHandler, handleCacheHeaders, splitCookiesString, createEvent, fetchWithEvent, isEvent, eventHandler, setHeaders, sendRedirect, proxyRequest, getRequestHeader, setResponseHeaders, setResponseStatus, send, getRequestHeaders, setResponseHeader, getRequestURL, getResponseHeader, getResponseStatus, createError, lazyEventHandler, useBase, createApp, createRouter as createRouter$1, toNodeListener, getRouterParam, readBody, getQuery as getQuery$1, getResponseStatusText } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/h3/dist/index.mjs';
-import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/vue-bundle-renderer/dist/runtime.mjs';
-import destr from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/destr/dist/index.mjs';
-import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, joinRelativeURL } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/ufo/dist/index.mjs';
-import { createHead as createHead$1, propsToString, renderSSRHead } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/unhead/dist/server.mjs';
-import { isVNode, toValue, isRef } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/vue/index.mjs';
-import { walkResolver } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/unhead/dist/utils.mjs';
-import { renderToString } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/vue/server-renderer/index.mjs';
-import { klona } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/klona/dist/index.mjs';
-import defu, { defuFn } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/defu/dist/defu.mjs';
-import { snakeCase } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/scule/dist/index.mjs';
-import { stringify, uneval } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/devalue/index.js';
-import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/unhead/dist/plugins.mjs';
-import { createHooks } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/hookable/dist/index.mjs';
-import { createFetch, Headers as Headers$1 } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/ofetch/dist/node.mjs';
-import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/node-mock-http/dist/index.mjs';
-import { createStorage, prefixStorage } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/unstorage/dist/index.mjs';
-import unstorage_47drivers_47fs from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/unstorage/drivers/fs.mjs';
-import { digest } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/nitropack/node_modules/ohash/dist/index.mjs';
-import { toRouteMatcher, createRouter } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/radix3/dist/index.mjs';
+import { createRenderer, getRequestDependencies, getPreloadLinks, getPrefetchLinks } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/vue-bundle-renderer/dist/runtime.mjs';
+import destr from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/destr/dist/index.mjs';
+import { parseURL, withoutBase, joinURL, getQuery, withQuery, withTrailingSlash, joinRelativeURL } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/ufo/dist/index.mjs';
+import { createHead as createHead$1, propsToString, renderSSRHead } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/unhead/dist/server.mjs';
+import { isVNode, toValue, isRef } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/vue/index.mjs';
+import { walkResolver } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/unhead/dist/utils.mjs';
+import { renderToString } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/vue/server-renderer/index.mjs';
+import { createHooks } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/hookable/dist/index.mjs';
+import { createFetch, Headers as Headers$1 } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/ofetch/dist/node.mjs';
+import { fetchNodeRequestHandler, callNodeRequestHandler } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/node-mock-http/dist/index.mjs';
+import { createStorage, prefixStorage } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/unstorage/dist/index.mjs';
+import unstorage_47drivers_47fs from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/unstorage/drivers/fs.mjs';
+import { digest } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/nitropack/node_modules/ohash/dist/index.mjs';
+import { klona } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/klona/dist/index.mjs';
+import defu, { defuFn } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/defu/dist/defu.mjs';
+import { snakeCase } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/scule/dist/index.mjs';
+import { getContext } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/unctx/dist/index.mjs';
+import { toRouteMatcher, createRouter } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/radix3/dist/index.mjs';
 import { readFile } from 'node:fs/promises';
-import consola, { consola as consola$1 } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/consola/dist/index.mjs';
-import { ErrorParser } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/youch-core/build/index.js';
-import { Youch } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/youch/build/index.js';
-import { SourceMapConsumer } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/source-map/source-map.js';
+import consola, { consola as consola$1 } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/consola/dist/index.mjs';
+import { ErrorParser } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/youch-core/build/index.js';
+import { Youch } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/youch/build/index.js';
+import { SourceMapConsumer } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/source-map/source-map.js';
 import { AsyncLocalStorage } from 'node:async_hooks';
-import { getContext } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/unctx/dist/index.mjs';
-import { captureRawStackTrace, parseRawStackTrace } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/errx/dist/index.js';
+import { stringify, uneval } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/devalue/index.js';
+import { captureRawStackTrace, parseRawStackTrace } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/errx/dist/index.js';
 import { fileURLToPath } from 'node:url';
-import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/ipx/dist/index.mjs';
-import { isAbsolute } from 'file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/node_modules/pathe/dist/index.mjs';
+import { ipxFSStorage, ipxHttpStorage, createIPX, createIPXH3Handler } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/ipx/dist/index.mjs';
+import { isAbsolute } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/pathe/dist/index.mjs';
+import { DeprecationsPlugin, PromisesPlugin, TemplateParamsPlugin, AliasSortingPlugin } from 'file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/node_modules/unhead/dist/plugins.mjs';
 
-const serverAssets = [{"baseName":"server","dir":"C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/server/assets"}];
+const serverAssets = [{"baseName":"server","dir":"/Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/server/assets"}];
 
 const assets = createStorage();
 
@@ -47,11 +47,11 @@ const storage = createStorage({});
 
 storage.mount('/assets', assets);
 
-storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/louka/Documents/Nuxt-TheLibrary-Louka","watchOptions":{"ignored":[null]}}));
-storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/server","watchOptions":{"ignored":[null]}}));
-storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/.nuxt"}));
-storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/.nuxt/cache"}));
-storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/.data/kv"}));
+storage.mount('root', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka","watchOptions":{"ignored":[null]}}));
+storage.mount('src', unstorage_47drivers_47fs({"driver":"fs","readOnly":true,"base":"/Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/server","watchOptions":{"ignored":[null]}}));
+storage.mount('build', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/.nuxt"}));
+storage.mount('cache', unstorage_47drivers_47fs({"driver":"fs","readOnly":false,"base":"/Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/.nuxt/cache"}));
+storage.mount('data', unstorage_47drivers_47fs({"driver":"fs","base":"/Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/.data/kv"}));
 
 function useStorage(base = "") {
   return base ? prefixStorage(storage, base) : storage;
@@ -652,7 +652,7 @@ const _inlineRuntimeConfig = {
     "alias": {},
     "fs": {
       "dir": [
-        "C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/public"
+        "/Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/public"
       ]
     },
     "http": {
@@ -702,6 +702,11 @@ new Proxy(/* @__PURE__ */ Object.create(null), {
     }
     return void 0;
   }
+});
+
+getContext("nitro-app", {
+  asyncContext: false,
+  AsyncLocalStorage: void 0
 });
 
 const config = useRuntimeConfig();
@@ -1018,13 +1023,13 @@ if (!window.__NUXT_DEVTOOLS_TIME_METRIC__) {
 window.__NUXT_DEVTOOLS_TIME_METRIC__.appInit = Date.now()
 `;
 
-const _s3e7JP3KyVRtSYHidBfmIrDEIKK7Ufl3JRy3BQ2uf0Y = (function(nitro) {
+const _R3IcL4T_16ugOrmOQF20ifkc2NKhzlgnbd5KCSIoG4 = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script$1}<\/script>`);
   });
 });
 
-const rootDir = "C:/Users/louka/Documents/Nuxt-TheLibrary-Louka";
+const rootDir = "/Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka";
 
 const appHead = {"meta":[{"name":"viewport","content":"width=device-width, initial-scale=1"},{"charset":"utf-8"}],"link":[],"style":[],"script":[],"noscript":[]};
 
@@ -1043,7 +1048,7 @@ const devReducers = {
   URL: (data) => data instanceof URL ? data.toString() : void 0
 };
 const asyncContext = getContext("nuxt-dev", { asyncContext: true, AsyncLocalStorage });
-const _D8giTKe9OCdDsxDuSruc9GRwMIDlXtorsXjb8ptlQc = (nitroApp) => {
+const _TVqTwSrqCl3ut66AVnp1jcxhAEx8Nh0Jgbcg2Hz91Y = (nitroApp) => {
   const handler = nitroApp.h3App.handler;
   nitroApp.h3App.handler = (event) => {
     return asyncContext.callAsync({ logs: [], event }, () => handler(event));
@@ -1114,16 +1119,16 @@ function onConsoleLog(callback) {
 
 const script = "\"use strict\";(()=>{const a=window,e=document.documentElement,c=window.localStorage,d=[\"dark\",\"light\"],n=c&&c.getItem&&c.getItem(\"nuxt-color-mode\")||\"system\";let l=n===\"system\"?f():n;const i=e.getAttribute(\"data-color-mode-forced\");i&&(l=i),r(l),a[\"__NUXT_COLOR_MODE__\"]={preference:n,value:l,getColorScheme:f,addColorScheme:r,removeColorScheme:u};function r(o){const t=\"\"+o+\"-mode\",s=\"\";e.classList?e.classList.add(t):e.className+=\" \"+t,s&&e.setAttribute(\"data-\"+s,o)}function u(o){const t=\"\"+o+\"-mode\",s=\"\";e.classList?e.classList.remove(t):e.className=e.className.replace(new RegExp(t,\"g\"),\"\"),s&&e.removeAttribute(\"data-\"+s)}function m(o){return a.matchMedia(\"(prefers-color-scheme\"+o+\")\")}function f(){if(a.matchMedia&&m(\"\").media!==\"not all\"){for(const o of d)if(m(\":\"+o).matches)return o}return\"light\"}})();";
 
-const _6ITvI6CR_lKYQWeabMoeNBi6ue0uz92NNfYPrliKesA = (function(nitro) {
+const _QrR0mlDtD9mBae8wX_tTcRLEmJfGQeHgjBlWDE4nu8c = (function(nitro) {
   nitro.hooks.hook("render:html", (htmlContext) => {
     htmlContext.head.push(`<script>${script}<\/script>`);
   });
 });
 
 const plugins = [
-  _s3e7JP3KyVRtSYHidBfmIrDEIKK7Ufl3JRy3BQ2uf0Y,
-_D8giTKe9OCdDsxDuSruc9GRwMIDlXtorsXjb8ptlQc,
-_6ITvI6CR_lKYQWeabMoeNBi6ue0uz92NNfYPrliKesA
+  _R3IcL4T_16ugOrmOQF20ifkc2NKhzlgnbd5KCSIoG4,
+_TVqTwSrqCl3ut66AVnp1jcxhAEx8Nh0Jgbcg2Hz91Y,
+_QrR0mlDtD9mBae8wX_tTcRLEmJfGQeHgjBlWDE4nu8c
 ];
 
 function defineRenderHandler(render) {
@@ -1214,7 +1219,7 @@ function publicAssetsURL(...path) {
   return path.length ? joinRelativeURL(publicBase, ...path) : publicBase;
 }
 
-const _a1iYhm = lazyEventHandler(() => {
+const _2ldRo9 = lazyEventHandler(() => {
   const opts = useRuntimeConfig().ipx || {};
   const fsDir = opts?.fs?.dir ? (Array.isArray(opts.fs.dir) ? opts.fs.dir : [opts.fs.dir]).map((dir) => isAbsolute(dir) ? dir : fileURLToPath(new URL(dir, globalThis._importMeta_.url))) : void 0;
   const fsStorage = opts.fs?.dir ? ipxFSStorage({ ...opts.fs, dir: fsDir }) : void 0;
@@ -1232,12 +1237,12 @@ const _a1iYhm = lazyEventHandler(() => {
   return useBase(opts.baseURL, ipxHandler);
 });
 
-const _lazy_lrVcYX = () => Promise.resolve().then(function () { return renderer$1; });
+const _lazy_NmHQA1 = () => Promise.resolve().then(function () { return renderer$1; });
 
 const handlers = [
-  { route: '/__nuxt_error', handler: _lazy_lrVcYX, lazy: true, middleware: false, method: undefined },
-  { route: '/_ipx/**', handler: _a1iYhm, lazy: false, middleware: false, method: undefined },
-  { route: '/**', handler: _lazy_lrVcYX, lazy: true, middleware: false, method: undefined }
+  { route: '/__nuxt_error', handler: _lazy_NmHQA1, lazy: true, middleware: false, method: undefined },
+  { route: '/_ipx/**', handler: _2ldRo9, lazy: false, middleware: false, method: undefined },
+  { route: '/**', handler: _lazy_NmHQA1, lazy: true, middleware: false, method: undefined }
 ];
 
 function createNitroApp() {
@@ -1504,8 +1509,8 @@ function resolveUnrefHeadInput(input) {
 
 const APP_ROOT_OPEN_TAG = `<${appRootTag}${propsToString(appRootAttrs)}>`;
 const APP_ROOT_CLOSE_TAG = `</${appRootTag}>`;
-const getClientManifest = () => import('file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
-const getServerEntry = () => import('file://C:/Users/louka/Documents/Nuxt-TheLibrary-Louka/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
+const getClientManifest = () => import('file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/.nuxt/dist/server/client.manifest.mjs').then((r) => r.default || r).then((r) => typeof r === "function" ? r() : r);
+const getServerEntry = () => import('file:///Users/loukavandertaelen/Documents/Nuxt-TheLibrary-Louka/.nuxt/dist/server/server.mjs').then((r) => r.default || r);
 const getSSRStyles = lazyCachedFunction(() => Promise.resolve().then(function () { return styles$1; }).then((r) => r.default || r));
 const getSSRRenderer = lazyCachedFunction(async () => {
   const manifest = await getClientManifest();
