@@ -16,7 +16,7 @@
 
       <!-- Taalwisselaar onderaan -->
       <div class="language-switcher">
-        <button @click="changeLanguage('nl')">🇳🇱</button>
+        <button @click="changeLanguage('nl')">🇧🇪</button>
         <button @click="changeLanguage('en')">🇬🇧</button>
         <button @click="changeLanguage('fr')">🇫🇷</button>
       </div>
