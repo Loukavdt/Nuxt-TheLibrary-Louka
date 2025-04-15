@@ -6,7 +6,7 @@
         <input 
           v-model="searchQuery"
           type="text" 
-          placeholder="Filter notifications" 
+          placeholder="Search books" 
           class="w-72 py-1.5 pl-4 pr-4 bg-gray-700 text-white placeholder-white rounded-full focus:outline-none focus:ring-2 focus:ring-red-400"
         />
       </div>
