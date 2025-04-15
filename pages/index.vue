@@ -3,7 +3,7 @@
     <!-- Cookie Consent Modal -->
     <div 
       v-if="showCookieModal" 
-      class="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50"
+      class="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-40"
     >
       <div class="bg-white p-12 rounded-lg shadow-lg w-11/12 max-w-xl">
         <h2 class="text-3xl font-semibold mb-6 text-center">Our website uses cookies</h2>
@@ -29,7 +29,17 @@
     </div>
 
     <!-- Top Navigation Bar -->
-    <header class="bg-white shadow px-4 py-3 flex items-center justify-end">
+    <header class="bg-white shadow px-4 py-3 flex items-center justify-end fixed top-0 left-0 right-0 z-50">
+      <!-- Search Bar -->
+      <div class="flex items-center space-x-2 mr-6">
+        <input 
+          type="text" 
+          placeholder="Search books" 
+          class="w-72 py-1.5 pl-4 pr-4 bg-gray-700 text-white placeholder-white rounded-full focus:outline-none focus:ring-2 focus:ring-red-400"
+        />
+      </div>
+
+      <!-- Icon Buttons -->
       <div class="flex items-center space-x-6 text-gray-700">
         <NuxtLink to="/cart" class="hover:text-red-600">
           <ShoppingCartIcon class="w-6 h-6" />
@@ -42,6 +52,9 @@
         </NuxtLink>
       </div>
     </header>
+
+    <!-- Spacer to prevent content overlap with fixed header -->
+    <div class="h-20"></div>
 
     <!-- New Arrivals Section -->
     <section class="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -91,13 +104,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted } from 'vue';
+import { ref } from 'vue';
 import { ShoppingCartIcon, BellIcon, UserIcon } from '@heroicons/vue/24/solid';
 
-// State to show the cookie modal
-const showCookieModal = ref(true); // Set to true to show on every visit
+// Cookie modal state
+const showCookieModal = ref(true);
 
-// Books data (can be dynamic or static as needed)
+// Sample book data
 const recommendedBooks = ref([
   { id: 1, title: 'The Art of Design', author: 'John Doe' },
   { id: 2, title: 'Sustainable Living', author: 'Jane Smith' },
@@ -112,12 +125,10 @@ const popularBooks = ref([
   { id: 8, title: 'Fine Arts Today', author: 'Sophia Taylor' }
 ]);
 
-// Accept cookies action (hides the modal)
+// Cookie actions
 const acceptCookies = () => {
   showCookieModal.value = false;
 };
-
-// Decline cookies action (hides the modal)
 const declineCookies = () => {
   showCookieModal.value = false;
 };
@@ -136,7 +147,7 @@ const declineCookies = () => {
   text-align: center;
 }
 
-/* For mobile responsiveness */
+/* Optional: for mobile responsiveness */
 @media (max-width: 640px) {
   .w-full {
     width: 100%;
