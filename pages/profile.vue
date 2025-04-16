@@ -1,7 +1,7 @@
 <template>
   <div class="bg-gray-100 text-gray-900">
     <!-- Top Navigation Bar -->
-    <header class="bg-white shadow px-4 py-3 flex items-center justify-end">
+    <header class="bg-white shadow px-4 py-3 flex items-center justify-end fixed top-0 left-0 right-0 z-50">
       <!-- Search Bar -->
       <div class="flex items-center space-x-2 mr-6">
         <input 
@@ -26,40 +26,31 @@
     </header>
 
     <!-- Padding to push down content below the fixed header -->
-    <div class="h-4"></div>
+    <div class="h-20"></div>
 
-    <!-- Content for the Profile Page -->
+    <!-- Profile Section with updated content -->
     <section class="container mx-auto px-4 py-12 mt-24">
-      <h1 class="text-3xl font-semibold">Your Profile</h1>
-      
-      <!-- Profile Content -->
-      <div class="mt-8">
-        <div class="bg-white shadow rounded-lg p-6 mb-4">
-          <h3 class="text-xl font-semibold">Personal Information</h3>
-          <p class="text-gray-700 mt-2">Name: John Doe</p>
-          <p class="text-gray-700 mt-2">Email: johndoe@example.com</p>
-          <p class="text-gray-700 mt-2">Phone: (123) 456-7890</p>
-          <p class="text-gray-700 mt-2">Address: 123 Main St, City, Country</p>
+      <!-- Profile Picture + Info -->
+      <div class="flex flex-col items-center mb-8">
+        <div class="w-20 h-20 bg-red-800 rounded-full flex items-center justify-center text-white text-2xl font-bold">
+          O
         </div>
+        <h2 class="text-xl font-bold mt-4">Name</h2>
+        <p class="text-sm text-gray-600 text-center">Lorem ipsum dolor sit amet consectetur.</p>
+      </div>
 
-        <div class="bg-white shadow rounded-lg p-6 mb-4">
-          <h3 class="text-xl font-semibold">Account Settings</h3>
-          <p class="text-gray-700 mt-2">Password: **********</p>
-          <p class="text-gray-700 mt-2">Notification Preferences: Enabled</p>
-          <p class="text-gray-700 mt-2">Privacy Settings: Public</p>
-        </div>
-
-        <div class="bg-white shadow rounded-lg p-6 mb-4">
-          <h3 class="text-xl font-semibold">Recent Activity</h3>
-          <p class="text-gray-700 mt-2">You recently added "The Great Gatsby" to your reading list.</p>
-          <p class="text-gray-700 mt-2">You liked the book "The Catcher in the Rye" on 4/1/2025.</p>
-          <p class="text-gray-700 mt-2">You updated your email address on 3/15/2025.</p>
-        </div>
-
-        <div class="bg-white shadow rounded-lg p-6 mb-4">
-          <h3 class="text-xl font-semibold">Upcoming Book Reservations</h3>
-          <p class="text-gray-700 mt-2">Your reservation for "1984" by George Orwell is available for pickup from 4/10/2025.</p>
-          <p class="text-gray-700 mt-2">Your reservation for "Brave New World" is scheduled for 4/15/2025.</p>
+      <!-- Profile Fields -->
+      <div class="max-w-md mx-auto border border-red-800 rounded-2xl divide-y divide-gray-200 bg-transparent">
+        <div
+          v-for="(field, i) in profileFields"
+          :key="i"
+          class="flex items-center justify-between p-4 cursor-pointer transition-colors duration-150"
+        >
+          <div>
+            <p class="text-xs font-bold uppercase">{{ field.label }}</p>
+            <p class="text-sm text-gray-600">{{ field.value }}</p>
+          </div>
+          <ChevronRightIcon class="w-4 h-4 text-red-800" />
         </div>
       </div>
     </section>
@@ -68,16 +59,31 @@
 
 <script setup>
 import { ref } from 'vue'
-import { ShoppingCartIcon, BellIcon, UserIcon, MagnifyingGlassIcon } from '@heroicons/vue/24/solid'
+import {
+  ShoppingCartIcon,
+  BellIcon,
+  UserIcon
+} from '@heroicons/vue/24/solid'
+
+import {
+  ChevronRightIcon
+} from '@heroicons/vue/24/outline'
+
+const profileFields = ref([
+  { label: 'Name', value: 'Lorem ipsum dolor sit amet' },
+  { label: 'Bio', value: 'Lorem ipsum dolor sit amet' },
+  { label: 'E-mail', value: 'Lorem ipsum dolor sit amet' },
+  { label: 'Location', value: 'Lorem ipsum dolor sit amet' },
+  { label: 'Passwords', value: 'Lorem ipsum dolor sit amet' },
+  { label: 'Language', value: 'Lorem ipsum dolor sit amet' },
+])
 </script>
 
 <style scoped>
-/* Style the input to leave space for the icon inside */
 input {
-  padding-left: 2rem; /* Space for the icon */
+  padding-left: 2rem;
 }
 
-/* Position the search icon inside the input */
 input + svg {
   position: absolute;
   left: 12px;
@@ -96,16 +102,10 @@ header {
 }
 
 body {
-  padding-top: 80px; /* Adjust according to the header height */
+  padding-top: 80px;
 }
 
-/* Profile content styles */
-section {
-  padding: 20px;
-}
-
-/* Add margin-top for the section to avoid overlap with the header */
 .mt-24 {
-  margin-top: 96px; /* Adjusted value to push content further down */
+  margin-top: 96px;
 }
 </style>
