@@ -31,8 +31,9 @@
       <!-- Page Title -->
       <div class="mb-8">
         <h1 class="text-3xl font-bold text-black">Edit Profile</h1>
-        <p class="text-sm text-black mt-1">
-          Update your personal information and preferences below.
+        <!-- Updated text positioning under the title -->
+        <p class="text-md text-black mt-4 max-w-2xl">
+          Please make sure to update your profile and account information accurately. You can change your personal details, update your password, or modify other preferences here.
         </p>
       </div>
 
@@ -96,63 +97,90 @@
       <div class="max-w-md mx-auto border border-red-800 rounded-2xl divide-y divide-gray-200 bg-transparent">
         <!-- Name Field -->
         <div class="flex flex-col gap-1 p-4 relative">
-          <label class="text-xs font-bold uppercase">Name</label>
+          <label class="text-xs font-bold text-gray-500 uppercase">Name</label>
           <input
             v-model="profileFields.find(field => field.label === 'Name').value"
-            class="w-full bg-white border border-gray-300 text-sm text-gray-700 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+            class="w-full bg-white border border-gray-300 text-sm text-black rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
           />
         </div>
 
         <!-- E-mail Field -->
         <div class="flex flex-col gap-1 p-4 relative">
-          <label class="text-xs font-bold uppercase">E-mail</label>
+          <label class="text-xs font-bold text-gray-500 uppercase">E-mail</label>
           <input
             v-model="profileFields.find(field => field.label === 'E-mail').value"
             type="email"
-            class="w-full bg-white border border-gray-300 text-sm text-gray-700 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+            class="w-full bg-white border border-gray-300 text-sm text-black rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
           />
         </div>
 
         <!-- Location Field -->
         <div class="flex flex-col gap-1 p-4 relative">
-          <label class="text-xs font-bold uppercase">Location</label>
+          <label class="text-xs font-bold text-gray-500 uppercase">Location</label>
           <input
             v-model="profileFields.find(field => field.label === 'Location').value"
-            class="w-full bg-white border border-gray-300 text-sm text-gray-700 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+            class="w-full bg-white border border-gray-300 text-sm text-black rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
           />
         </div>
 
         <!-- Current Password Field -->
         <div class="flex flex-col gap-1 p-4 relative">
-          <label class="text-xs font-bold uppercase">Current Password</label>
-          <input
-            type="password"
-            v-model="currentPassword"
-            class="w-full bg-white border border-gray-300 text-sm text-gray-700 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
-            placeholder="Enter current password"
-          />
+          <label class="text-xs font-bold text-gray-500 uppercase">Current Password</label>
+          <div class="relative">
+            <input
+              :type="showCurrentPassword ? 'text' : 'password'"
+              v-model="currentPassword"
+              class="w-full bg-white border border-gray-300 text-sm text-black rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+              placeholder="Enter current password"
+            />
+            <button
+              type="button"
+              @click="showCurrentPassword = !showCurrentPassword"
+              class="absolute right-2 top-1/2 transform -translate-y-1/2 text-red-800 text-xs font-semibold"
+            >
+              {{ showCurrentPassword ? 'Hide' : 'Show' }}
+            </button>
+          </div>
         </div>
 
         <!-- New Password Field -->
         <div class="flex flex-col gap-1 p-4 relative">
-          <label class="text-xs font-bold uppercase">New Password</label>
-          <input
-            type="password"
-            v-model="newPassword"
-            class="w-full bg-white border border-gray-300 text-sm text-gray-700 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
-            placeholder="Enter new password"
-          />
+          <label class="text-xs font-bold text-gray-500 uppercase">New Password</label>
+          <div class="relative">
+            <input
+              :type="showNewPassword ? 'text' : 'password'"
+              v-model="newPassword"
+              class="w-full bg-white border border-gray-300 text-sm text-black rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+              placeholder="Enter new password"
+            />
+            <button
+              type="button"
+              @click="showNewPassword = !showNewPassword"
+              class="absolute right-2 top-1/2 transform -translate-y-1/2 text-red-800 text-xs font-semibold"
+            >
+              {{ showNewPassword ? 'Hide' : 'Show' }}
+            </button>
+          </div>
         </div>
 
         <!-- Repeat New Password Field -->
         <div class="flex flex-col gap-1 p-4 relative">
-          <label class="text-xs font-bold uppercase">Repeat New Password</label>
-          <input
-            type="password"
-            v-model="repeatPassword"
-            class="w-full bg-white border border-gray-300 text-sm text-gray-700 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
-            placeholder="Repeat new password"
-          />
+          <label class="text-xs font-bold text-gray-500 uppercase">Repeat New Password</label>
+          <div class="relative">
+            <input
+              :type="showRepeatPassword ? 'text' : 'password'"
+              v-model="repeatPassword"
+              class="w-full bg-white border border-gray-300 text-sm text-black rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+              placeholder="Repeat new password"
+            />
+            <button
+              type="button"
+              @click="showRepeatPassword = !showRepeatPassword"
+              class="absolute right-2 top-1/2 transform -translate-y-1/2 text-red-800 text-xs font-semibold"
+            >
+              {{ showRepeatPassword ? 'Hide' : 'Show' }}
+            </button>
+          </div>
           <!-- Error Message for Mismatch -->
           <p v-if="passwordMismatch" class="text-xs text-red-500 mt-1">Passwords do not match!</p>
         </div>
@@ -188,7 +216,9 @@ import {
 } from '@heroicons/vue/24/solid'
 
 // State variables
-const showPassword = ref(false)
+const showCurrentPassword = ref(false)
+const showNewPassword = ref(false)
+const showRepeatPassword = ref(false)
 const avatar = ref(null)
 const bio = ref('Book lover, writer, explorer.')
 const isEditingBio = ref(false)
@@ -275,7 +305,7 @@ onMounted(() => {
 
 <style scoped>
 input {
-  padding-left: 2rem;
+  padding-left: 1rem;
 }
 
 input + svg {
@@ -301,5 +331,32 @@ body {
 
 .mt-24 {
   margin-top: 96px;
+}
+
+button {
+  font-size: 12px;
+}
+
+button {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+button + input {
+  padding-right: 32px;
+}
+
+button+input::placeholder {
+  font-size: 12px;
+}
+
+.form {
+  border-top: 10px solid;
+}
+
+/* Adjustments */
+p {
+  max-width: 600px;  /* Limit the width for wrapping */
+  margin-top: 10px;
 }
 </style>
