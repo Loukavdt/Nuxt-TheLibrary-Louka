@@ -28,8 +28,16 @@
     <!-- Padding to push down content below the fixed header -->
     <div class="h-20"></div>
 
-    <!-- Profile Section with updated content -->
+    <!-- Profile Section -->
     <section class="container mx-auto px-4 py-12 mt-24">
+      <!-- Page Title -->
+      <div class="mb-8">
+        <h1 class="text-3xl font-bold text-black">Edit Profile</h1>
+        <p class="text-sm text-black mt-1">
+          Update your personal information and preferences below.
+        </p>
+      </div>
+
       <!-- Profile Picture + Info -->
       <div class="flex flex-col items-center mb-8">
         <div class="w-20 h-20 bg-red-800 rounded-full flex items-center justify-center text-white text-2xl font-bold">
@@ -44,39 +52,91 @@
         <div
           v-for="(field, i) in profileFields"
           :key="i"
-          class="flex items-center justify-between p-4 cursor-pointer transition-colors duration-150"
+          class="flex flex-col gap-1 p-4 relative"
         >
-          <div>
-            <p class="text-xs font-bold uppercase">{{ field.label }}</p>
-            <p class="text-sm text-gray-600">{{ field.value }}</p>
+          <label class="text-xs font-bold uppercase">{{ field.label }}</label>
+          
+          <div class="relative">
+            <input
+              :type="field.label === 'Passwords' && !showPassword ? 'password' : 'text'"
+              v-model="field.value"
+              class="w-full bg-white border border-gray-300 text-sm text-gray-700 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-red-400"
+            />
+
+            <!-- Show/Hide Toggle inside the input -->
+            <button
+              v-if="field.label === 'Passwords'"
+              type="button"
+              @click="showPassword = !showPassword"
+              class="absolute right-3 top-1/2 transform -translate-y-1/2 text-xs text-red-700 hover:underline"
+            >
+              {{ showPassword ? 'Hide' : 'Show' }}
+            </button>
           </div>
-          <ChevronRightIcon class="w-4 h-4 text-red-800" />
+        </div>
+
+        <!-- Save Button -->
+        <div class="p-4">
+          <button
+            @click="saveProfile"
+            class="w-full bg-red-800 text-white py-2 rounded-xl hover:bg-red-700 transition duration-200 font-semibold"
+          >
+            Save Changes
+          </button>
         </div>
       </div>
     </section>
+
+    <!-- Toast Message -->
+    <div
+      v-if="showToast"
+      class="fixed bottom-6 left-1/2 transform -translate-x-1/2 bg-green-600 text-white px-4 py-2 rounded-lg shadow-lg transition-all duration-300"
+    >
+      Profile saved successfully!
+    </div>
   </div>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import {
   ShoppingCartIcon,
   BellIcon,
   UserIcon
 } from '@heroicons/vue/24/solid'
 
-import {
-  ChevronRightIcon
-} from '@heroicons/vue/24/outline'
+const showPassword = ref(false)
 
-const profileFields = ref([
-  { label: 'Name', value: 'Lorem ipsum dolor sit amet' },
-  { label: 'Bio', value: 'Lorem ipsum dolor sit amet' },
-  { label: 'E-mail', value: 'Lorem ipsum dolor sit amet' },
-  { label: 'Location', value: 'Lorem ipsum dolor sit amet' },
-  { label: 'Passwords', value: 'Lorem ipsum dolor sit amet' },
-  { label: 'Language', value: 'Lorem ipsum dolor sit amet' },
-])
+const defaultFields = [
+  { label: 'Name', value: 'John Doe' },
+  { label: 'Bio', value: 'Book lover, writer, explorer.' },
+  { label: 'E-mail', value: 'johndoe@example.com' },
+  { label: 'Location', value: 'New York, USA' },
+  { label: 'Passwords', value: 'password123' },
+  { label: 'Language', value: 'English' },
+]
+
+const profileFields = ref([...defaultFields])
+const showToast = ref(false)
+
+const saveProfile = () => {
+  localStorage.setItem('userProfile', JSON.stringify(profileFields.value))
+  showToast.value = true
+  setTimeout(() => {
+    showToast.value = false
+  }, 2500)
+}
+
+onMounted(() => {
+  const savedData = localStorage.getItem('userProfile')
+  if (savedData) {
+    try {
+      profileFields.value = JSON.parse(savedData)
+    } catch (e) {
+      console.error('Error parsing saved profile data:', e)
+    }
+  }
+})
 </script>
 
 <style scoped>
