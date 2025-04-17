@@ -58,7 +58,7 @@
     <!-- New Arrivals Section -->
     <section class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
       <div>
-        <NuxtLink to="/Login" class="text-red-600 hover:underline">Login</NuxtLink>
+        <!-- 👇 Login link removed here -->
         <h1 class="text-2xl sm:text-3xl font-bold mt-2">DISCOVER THE NEW ARRIVALS</h1>
         <p class="mt-4 text-gray-700 text-sm sm:text-base">
           Exciting news for students! Our library has recently added a wide variety of new books covering urban planning, 
