@@ -21,7 +21,8 @@
         </button>
       </div>
 
-      <form @submit.prevent="goToHomePage" class="space-y-4">
+      <!-- Form inputs -->
+      <form class="space-y-4">
         <input type="text" placeholder="Enter First name" class="input-field" />
         <input type="text" placeholder="Enter Last name" class="input-field" />
         <input type="email" placeholder="Enter E-mail" class="input-field" />
@@ -33,9 +34,10 @@
           <label for="policy" class="text-gray-700 text-sm leading-snug">I agree to the privacy policy and terms.</label>
         </div>
 
-        <button type="submit" class="w-full bg-red-800 text-white py-2 rounded-full hover:bg-red-700">
+        <!-- ✅ Sign up button as NuxtLink to /homepage -->
+        <NuxtLink to="/homepage" class="block text-center w-full bg-red-800 text-white py-2 rounded-full hover:bg-red-700">
           Sign up
-        </button>
+        </NuxtLink>
       </form>
 
       <p class="text-center mt-4 text-sm">
@@ -48,9 +50,7 @@
 
 <script setup>
 import { ref } from "vue";
-import { useRouter } from "vue-router";
 
-const router = useRouter();
 const selectedRole = ref("STUDENT");
 
 const roles = [
@@ -60,10 +60,6 @@ const roles = [
 ];
 
 const textSize = 'text-sm';
-
-const goToHomePage = () => {
-  router.push("/");
-};
 </script>
 
 <style scoped>

@@ -97,7 +97,7 @@ const closeDrawer = () => {
         <!-- Navigation links -->
         <div class="space-y-3">
           <!-- Group 1 -->
-          <NuxtLink to="/" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-red-600">
+          <NuxtLink to="homepage" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-red-600">
             HOME
           </NuxtLink>
           <NuxtLink to="/recent" class="block text-lg font-medium text-gray-800 dark:text-white hover:text-red-600">

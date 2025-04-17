@@ -23,6 +23,7 @@
         </button>
       </div>
 
+      <!-- Login form -->
       <form @submit.prevent="goToHomePage" class="space-y-4">
         <input type="email" placeholder="Enter E-mail" class="input-field" />
         <input type="password" placeholder="Enter Password" class="input-field" />
@@ -36,6 +37,7 @@
           <NuxtLink to="/forgot-password" class="text-red-700 hover:underline">Forgot password?</NuxtLink>
         </div>
 
+        <!-- ✅ Redirect to /homepage on login -->
         <button type="submit" class="w-full bg-red-800 text-white py-2 rounded-full hover:bg-red-700">
           Log in
         </button>
@@ -64,8 +66,9 @@ const roles = [
 
 const textSize = 'text-sm';
 
+// ✅ Send to /homepage
 const goToHomePage = () => {
-  router.push("/");
+  router.push("/homepage");
 };
 </script>
 
