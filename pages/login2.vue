@@ -1,23 +1,23 @@
 <template>
-  <div class="min-h-screen flex items-center justify-center bg-gradient-to-r from-red-800 to-gray-300">
-    <div class="bg-white p-10 rounded-lg shadow-lg w-full max-w-md">
+  <div class="min-h-screen flex items-center justify-center bg-gradient-to-r from-red-800 to-gray-300 px-4 sm:px-6 lg:px-8">
+    <div class="bg-white p-6 sm:p-10 rounded-lg shadow-lg w-full max-w-md">
       
       <!-- Back knop -->
-      <button @click="$router.back()" class="text-red-800 mb-4 text-4xl font-bold leading-none">
+      <button @click="$router.back()" class="text-red-800 mb-4 text-3xl sm:text-4xl font-bold leading-none">
         ←
       </button>
       
-      <h1 class="text-4xl font-bold text-center text-red-800 mb-6">Welcome Back</h1>
+      <h1 class="text-3xl sm:text-4xl font-bold text-center text-red-800 mb-6">Welcome Back</h1>
 
       <!-- Rol selectie knoppen -->
-      <div class="flex justify-center gap-4 mb-6">
+      <div class="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6">
         <button 
           v-for="role in roles" :key="role.name"
           @click="selectedRole = role.name"
           :class="[ 
-            'px-4 py-1 rounded-full text-white font-semibold', 
+            'px-4 py-1 rounded-full text-white font-semibold transition-colors duration-200', 
             selectedRole === role.name ? 'bg-gray-900' : role.bgColor,
-            textSize // Dynamically apply the textSize class
+            textSize
           ]">
           {{ role.name }}
         </button>
@@ -28,7 +28,7 @@
         <input type="password" placeholder="Enter Password" class="input-field" />
         <input type="password" placeholder="Repeat Password" class="input-field" />
 
-        <div class="flex items-center justify-between text-sm text-gray-700">
+        <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between text-sm text-gray-700 gap-2">
           <div class="flex items-center">
             <input type="checkbox" id="policy" class="mr-2" />
             <label for="policy">Remember me</label>
@@ -43,7 +43,6 @@
 
       <p class="text-center mt-4 text-sm">
         Don't have an account? 
-        <!-- Change the link here to the signup page -->
         <NuxtLink to="/signup" class="text-red-800 font-semibold">Sign up</NuxtLink>
       </p>
     </div>
@@ -54,23 +53,17 @@
 import { ref } from "vue";
 import { useRouter } from "vue-router";
 
-// Router instance for navigation
 const router = useRouter();
-
-// Selected role (default "STUDENT")
 const selectedRole = ref("STUDENT");
 
-// Role options
 const roles = [
   { name: "STUDENT", bgColor: "bg-red-700" },
   { name: "TEACHER", bgColor: "bg-blue-700" },
   { name: "EXTERNAL", bgColor: "bg-green-700" },
 ];
 
-// Font size class for roles (use 'text-xs' for smaller text)
-const textSize = 'text-xs'; // Change this to 'text-sm', 'text-base', 'text-lg', or 'text-xl' as needed
+const textSize = 'text-sm';
 
-// Navigate to home page
 const goToHomePage = () => {
   router.push("/");
 };

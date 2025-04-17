@@ -2,15 +2,6 @@
   <div class="bg-gray-100 text-gray-900 min-h-screen">
     <!-- Top Navigation Bar -->
     <header class="bg-white shadow px-4 py-3 flex items-center justify-end">
-      <div class="flex items-center space-x-2 mr-6">
-        <input 
-          v-model="searchQuery"
-          type="text" 
-          placeholder="Search books" 
-          class="w-72 py-1.5 pl-4 pr-4 bg-gray-700 text-white placeholder-white rounded-full focus:outline-none focus:ring-2 focus:ring-red-400"
-        />
-      </div>
-
       <div class="flex items-center space-x-6 text-gray-700">
         <NuxtLink to="/cart" class="hover:text-red-600">
           <ShoppingCartIcon class="w-6 h-6" />
@@ -222,5 +213,17 @@ header {
   z-index: 50;
   width: 100%;
   background-color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  header {
+    padding: 1rem 2rem;
+  }
+
+  .container {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 </style>

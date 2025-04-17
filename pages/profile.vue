@@ -2,14 +2,6 @@
   <div class="bg-gray-100 text-gray-900">
     <!-- Top Navigation Bar -->
     <header class="bg-white shadow px-4 py-3 flex items-center justify-end fixed top-0 left-0 right-0 z-50">
-      <div class="flex items-center space-x-2 mr-6">
-        <input 
-          type="text" 
-          placeholder="Search books" 
-          class="w-72 py-1.5 pl-4 pr-4 bg-gray-700 text-white placeholder-white rounded-full focus:outline-none focus:ring-2 focus:ring-red-400"
-        />
-      </div>
-
       <!-- Icon Buttons -->
       <div class="flex items-center space-x-6 text-gray-700">
         <NuxtLink to="/cart" class="hover:text-red-600">

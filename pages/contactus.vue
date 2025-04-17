@@ -2,15 +2,6 @@
   <div class="bg-gray-100 text-gray-900">
     <!-- Top Navigation Bar -->
     <header class="bg-white shadow px-4 py-3 flex items-center justify-end">
-      <!-- Search Bar -->
-      <div class="flex items-center space-x-2 mr-6">
-        <input 
-          type="text" 
-          placeholder="Search books" 
-          class="w-72 py-1.5 pl-4 pr-4 bg-gray-700 text-white placeholder-white rounded-full focus:outline-none focus:ring-2 focus:ring-red-400"
-        />
-      </div>
-
       <!-- Icon Buttons -->
       <div class="flex items-center space-x-6 text-gray-700">
         <NuxtLink to="/cart" class="hover:text-red-600">
@@ -33,7 +24,7 @@
       <h1 class="text-3xl font-semibold">Contact Us</h1>
 
       <!-- Contact Form -->
-      <form class="space-y-4 mt-8">
+      <form @submit.prevent="submitForm" class="space-y-4 mt-8">
         <div>
           <label for="name" class="block text-lg font-medium text-gray-800 dark:text-white">Name</label>
           <input
@@ -89,34 +80,6 @@ const submitForm = () => {
 </script>
 
 <style scoped>
-/* Style the input to leave space for the icon inside */
-input {
-  padding-left: 2rem; /* Space for the icon */
-}
-
-/* Position the search icon inside the input */
-input + svg {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  width: 100%;
-  background-color: white;
-}
-
-/* Margin to prevent content overlap with fixed header */
-body {
-  padding-top: 80px;
-}
-
 /* Adjustments for the form */
 form {
   padding: 20px;

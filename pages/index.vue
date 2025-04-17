@@ -3,23 +3,22 @@
     <!-- Cookie Consent Modal -->
     <div 
       v-if="showCookieModal" 
-      class="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-40"
+      class="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-40 px-4"
     >
-      <div class="bg-white p-12 rounded-lg shadow-lg w-11/12 max-w-xl">
-        <h2 class="text-3xl font-semibold mb-6 text-center">Our website uses cookies</h2>
-        <p class="text-1xl text-gray-700 mb-8 text-center">
+      <div class="bg-white p-6 sm:p-12 rounded-lg shadow-lg w-full max-w-xl">
+        <h2 class="text-2xl sm:text-3xl font-semibold mb-4 sm:mb-6 text-center">Our website uses cookies</h2>
+        <p class="text-sm sm:text-base text-gray-700 mb-6 sm:mb-8 text-center">
           Our website uses cookies. By continuing, we assume your permission to deploy cookies as detailed in our Privacy Policy.
         </p>
-        <!-- Buttons Section -->
-        <div class="flex flex-col justify-center items-center space-y-4">
+        <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
           <button 
-            class="bg-red-600 text-white px-8 py-3 rounded-lg hover:bg-red-500 text-lg w-full md:w-auto" 
+            class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-500 text-base w-full sm:w-auto" 
             @click="acceptCookies"
           >
             Accept cookies
           </button>
           <button 
-            class="bg-gray-500 text-white px-8 py-3 rounded-lg hover:bg-gray-400 text-lg w-full md:w-auto" 
+            class="bg-gray-500 text-white px-6 py-2 rounded-lg hover:bg-gray-400 text-base w-full sm:w-auto" 
             @click="declineCookies"
           >
             Decline cookies
@@ -30,15 +29,6 @@
 
     <!-- Top Navigation Bar -->
     <header class="bg-white shadow px-4 py-3 flex items-center justify-end fixed top-0 left-0 right-0 z-50">
-      <!-- Search Bar -->
-      <div class="flex items-center space-x-2 mr-6">
-        <input 
-          type="text" 
-          placeholder="Search books" 
-          class="w-72 py-1.5 pl-4 pr-4 bg-gray-700 text-white placeholder-white rounded-full focus:outline-none focus:ring-2 focus:ring-red-400"
-        />
-      </div>
-
       <!-- Icon Buttons -->
       <div class="flex items-center space-x-6 text-gray-700">
         <NuxtLink to="/cart" class="hover:text-red-600">
@@ -53,50 +43,58 @@
       </div>
     </header>
 
-    <!-- Spacer to prevent content overlap with fixed header -->
-    <div class="h-20"></div>
+    <!-- Spacer below fixed header -->
+    <div class="h-28 sm:h-20"></div>
+
+    <!-- Search Bar Section -->
+    <div class="max-w-7xl mx-auto px-4 mb-8">
+      <input 
+        type="text" 
+        placeholder="Search books..." 
+        class="w-full sm:w-1/2 px-4 py-2 rounded-full bg-white border border-gray-300 shadow-sm focus:outline-none focus:ring-2 focus:ring-red-400"
+      />
+    </div>
 
     <!-- New Arrivals Section -->
-    <section class="container mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+    <section class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
       <div>
-        <NuxtLink to="/Login">Login</NuxtLink>
-        <h1 class="text-3xl font-bold">DISCOVER THE NEW ARRIVALS</h1>
-        <p class="mt-4 text-gray-700">
+        <NuxtLink to="/Login" class="text-red-600 hover:underline">Login</NuxtLink>
+        <h1 class="text-2xl sm:text-3xl font-bold mt-2">DISCOVER THE NEW ARRIVALS</h1>
+        <p class="mt-4 text-gray-700 text-sm sm:text-base">
           Exciting news for students! Our library has recently added a wide variety of new books covering urban planning, 
           interior design, sustainable architecture, fine arts, and so much more. Whether you prefer to visit us in person 
           or browse online, there's something for everyone. Be sure to reserve your favorite titles and stay inspired.
         </p>
-        <button class="mt-4 bg-red-600 text-white px-6 py-2 rounded-lg">See More</button>
+        <button class="mt-4 bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-500 text-sm sm:text-base">
+          See More
+        </button>
       </div>
 
-      <div class="grid grid-cols-2 gap-8">
-        <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
-        <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
-        <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
-        <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
+      <div class="lg:col-span-2 grid grid-cols-2 sm:grid-cols-4 gap-4">
+        <img v-for="n in 4" :key="n" src="@/assets/images/5.jpg" class="rounded-lg shadow-lg w-full object-cover" />
       </div>
     </section>
 
     <!-- Recommended Books -->
-    <section class="container mx-auto px-4 py-12">
-      <h2 class="text-2xl font-semibold">RECOMMENDED BOOKS</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-4">
+    <section class="max-w-7xl mx-auto px-4 py-12">
+      <h2 class="text-xl sm:text-2xl font-semibold">RECOMMENDED BOOKS</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mt-4">
         <div v-for="book in recommendedBooks" :key="book.id" class="text-center">
-          <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
-          <p class="mt-2 font-semibold">{{ book.title }}</p>
-          <p class="text-gray-600 text-sm">{{ book.author }}</p>
+          <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg w-full h-40 object-cover" />
+          <p class="mt-2 font-semibold text-sm sm:text-base">{{ book.title }}</p>
+          <p class="text-gray-600 text-xs sm:text-sm">{{ book.author }}</p>
         </div>
       </div>
     </section>
 
     <!-- Popular Books -->
-    <section class="container mx-auto px-4 py-12">
-      <h2 class="text-2xl font-semibold">POPULAR BOOKS</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 mt-4">
+    <section class="max-w-7xl mx-auto px-4 py-12">
+      <h2 class="text-xl sm:text-2xl font-semibold">POPULAR BOOKS</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mt-4">
         <div v-for="book in popularBooks" :key="book.id" class="text-center">
-          <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg" />
-          <p class="mt-2 font-semibold">{{ book.title }}</p>
-          <p class="text-gray-600 text-sm">{{ book.author }}</p>
+          <img src="@/assets/images/5.jpg" class="rounded-lg shadow-lg w-full h-40 object-cover" />
+          <p class="mt-2 font-semibold text-sm sm:text-base">{{ book.title }}</p>
+          <p class="text-gray-600 text-xs sm:text-sm">{{ book.author }}</p>
         </div>
       </div>
     </section>
@@ -107,10 +105,8 @@
 import { ref } from 'vue';
 import { ShoppingCartIcon, BellIcon, UserIcon } from '@heroicons/vue/24/solid';
 
-// Cookie modal state
 const showCookieModal = ref(true);
 
-// Sample book data
 const recommendedBooks = ref([
   { id: 1, title: 'The Art of Design', author: 'John Doe' },
   { id: 2, title: 'Sustainable Living', author: 'Jane Smith' },
@@ -125,7 +121,6 @@ const popularBooks = ref([
   { id: 8, title: 'Fine Arts Today', author: 'Sophia Taylor' }
 ]);
 
-// Cookie actions
 const acceptCookies = () => {
   showCookieModal.value = false;
 };
@@ -133,24 +128,3 @@ const declineCookies = () => {
   showCookieModal.value = false;
 };
 </script>
-
-<style scoped>
-.bg-opacity-50 {
-  background-color: rgba(0, 0, 0, 0.5);
-}
-
-.w-11-12 {
-  width: 92%;
-}
-
-.text-center {
-  text-align: center;
-}
-
-/* Optional: for mobile responsiveness */
-@media (max-width: 640px) {
-  .w-full {
-    width: 100%;
-  }
-}
-</style>

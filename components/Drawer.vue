@@ -26,7 +26,7 @@ onMounted(() => {
 
   if ($targetEl) {
     drawer = new Drawer($targetEl, options)
-    drawer.hide()
+    drawer.hide() // Keep the drawer hidden initially on mobile
   }
 })
 
@@ -40,7 +40,7 @@ const closeDrawer = () => {
 </script>
 
 <template>
-  <!-- Drawer toggle button -->
+  <!-- Drawer toggle button (Visible when the drawer is not open) -->
   <button
     v-if="!isDrawerOpen"
     id="drawer-show-button"
@@ -52,7 +52,7 @@ const closeDrawer = () => {
     <Menu :size="25" />
   </button>
 
-  <!-- Drawer panel -->
+  <!-- Drawer panel (Always visible on desktop, hidden on mobile until clicked) -->
   <div class="max-w-4xl mx-auto">
     <div
       id="drawer-swipe"
@@ -151,5 +151,23 @@ a.router-link-exact-active {
   border: none !important;
   text-decoration: none !important;
   color: inherit !important;
+}
+
+/* Make the drawer visible on desktop */
+@media (max-width: 768px) {
+  #drawer-swipe {
+    width: 75vw; /* More space for smaller screens */
+  }
+}
+
+@media (min-width: 1024px) {
+  #drawer-swipe {
+    width: 300px; /* Make drawer wider for desktops */
+    display: block !important; /* Force it to be visible on desktop */
+  }
+
+  #drawer-show-button {
+    display: block !important; /* Ensure the toggle button is visible on desktop */
+  }
 }
 </style>

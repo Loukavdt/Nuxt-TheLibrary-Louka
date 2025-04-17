@@ -1,16 +1,7 @@
 <template>
   <div class="bg-gray-100 text-gray-900">
     <!-- Top Navigation Bar -->
-    <header class="bg-white shadow px-4 py-3 flex items-center justify-end">
-      <!-- Search Bar -->
-      <div class="flex items-center space-x-2 mr-6">
-        <input 
-          type="text" 
-          placeholder="Search books" 
-          class="w-72 py-1.5 pl-4 pr-4 bg-gray-700 text-white placeholder-white rounded-full focus:outline-none focus:ring-2 focus:ring-red-400"
-        />
-      </div>
-
+    <header class="bg-white shadow px-4 py-3 flex items-center justify-end fixed top-0 left-0 right-0 z-50">
       <!-- Icon Buttons -->
       <div class="flex items-center space-x-6 text-gray-700">
         <NuxtLink to="/cart" class="hover:text-red-600">
@@ -26,7 +17,7 @@
     </header>
 
     <!-- Padding to push down content below the fixed header -->
-    <div class="h-4"></div>
+    <div class="h-20"></div>
 
     <!-- Cart Content -->
     <section class="container mx-auto px-4 py-12 mt-24">
@@ -113,10 +104,10 @@
         </div>
       </div>
 
-      <!-- Selected Books Summary and Borrow Button in a Smaller Rectangle (Aligned Right) -->
+      <!-- Selected Books Summary and Borrow Button -->
       <div class="bg-white shadow rounded-lg p-4 mt-8 flex justify-between items-center max-w-4xl mx-auto sm:mx-0 sm:ml-auto">
         <!-- Left side: Books Selected -->
-        <div class="flex items-center space-x-1"> <!-- Reduced space-x from 2 to 1 -->
+        <div class="flex items-center space-x-1"> 
           <p class="text-lg font-semibold">Books Selected:</p>
           <p class="text-xl font-semibold text-red-600">{{ selectedBooks.length }}</p>
         </div>
@@ -135,7 +126,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { ShoppingCartIcon, BellIcon, UserIcon, MagnifyingGlassIcon } from '@heroicons/vue/24/solid'
+import { ShoppingCartIcon, BellIcon, UserIcon } from '@heroicons/vue/24/solid'
 
 // To track the selected books
 const selectedBooks = ref([])
@@ -156,37 +147,19 @@ const borrowBooks = () => {
 </script>
 
 <style scoped>
-/* Style the input to leave space for the icon inside */
-input {
-  padding-left: 2rem; /* Space for the icon */
-}
-
-/* Position the search icon inside the input */
-input + svg {
-  position: absolute;
-  left: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
+/* Fix header position */
 header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 50;
-  width: 100%;
   background-color: white;
 }
 
-/* Margin to prevent content overlap with fixed header */
+/* Padding for body to account for fixed header */
 body {
-  padding-top: 80px;
-}
-
-/* Cart item styles */
-section {
-  padding: 20px;
+  padding-top: 80px; /* Adjust as necessary to avoid overlap with the fixed header */
 }
 
 /* Adjust the position for the rectangle with selected books and borrow button */
