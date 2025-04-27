@@ -1,108 +1,34 @@
+@import url("https://use.typekit.net/rlj5vml.css");  /* Adobe Fonts Link for Hobeaux */
+@import url("https://use.typekit.net/rlj5vml.css");  /* Adobe Fonts Link for Charter BT */
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-@import url("https://use.typekit.net/rlj5vml.css");
-
-.montserrat-bold {
-  font-family: "Montserrat", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
-  text-transform: uppercase;
+/* Specific styles for Hobeaux font (titles) */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Hobeaux', sans-serif; /* Using Hobeaux from Adobe Fonts */
+  font-weight: 700; /* Set the weight to bold */
+  text-transform: none; /* You can add text-transform (uppercase, etc.) if needed */
+  line-height: normal;
 }
-.montserrat-semibold {
-    font-family: "Montserrat", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 800;
-    font-style: normal;
-    text-transform: uppercase;
-  }
 
-.roboto-thin {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-  }
-  
-  .roboto-thin-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 100;
-    font-style: italic;
-  }
-  
-  .roboto-light {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: normal;
-  }
-  
-  .roboto-light-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 300;
-    font-style: italic;
-  }
-  
-  .roboto-regular {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .roboto-regular-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 400;
-    font-style: italic;
-  }
-  
-  .roboto-medium {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: normal;
-  }
-  
-  .roboto-medium-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 500;
-    font-style: italic;
-  }
-  
-  .roboto-bold {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-  }
-  
-  .roboto-bold-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-  
-  .roboto-black {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-  }
-  
-  .roboto-black-italic {
-    font-family: "Roboto", sans-serif;
-    font-weight: 900;
-    font-style: italic;
-  }
-  
+/* Specific classes for page title and app title */
+.appTitle {
+  font-size: 1.2em;
+  font-family: 'Hobeaux', sans-serif; /* Using Hobeaux font */
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+}
 
-  .appTitle{
-    font-size:1.2em; 
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    line-height: normal;
-  }
+.pageTitle {
+  font-size: 5em;
+  font-family: 'Hobeaux', sans-serif; /* Using Hobeaux font */
+  font-weight: 700;
+  font-style: normal;
+  line-height: normal;
+}
 
-  .pageTitle{
-    font-size:5em; 
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-style: normal;
-    line-height: normal;
-  }
+/* Body text using Charter BT font */
+body, p, span, a, div, li {
+  font-family: 'Charter BT', serif; /* Apply Charter BT for the rest of the text */
+  font-weight: normal; /* Use normal weight for body text */
+  line-height: 1.6; /* Adjust line height for readability */
+}
