@@ -28,16 +28,16 @@
     </div>
 
     <!-- Top Navigation Bar -->
-    <header class="bg-white shadow px-4 py-3 flex items-center justify-end fixed top-0 left-0 right-0 z-50">
+    <header class="bg-gradient-to-r from-[#1A2E74] to-[#0aa044] shadow px-4 py-3 flex items-center justify-end fixed top-0 left-0 right-0 z-50">
       <!-- Icon Buttons -->
-      <div class="flex items-center space-x-6 text-gray-700">
-        <NuxtLink to="/cart" class="hover:text-red-600">
+      <div class="flex items-center space-x-6 text-white">
+        <NuxtLink to="/cart" class="hover:text-red-400">
           <ShoppingCartIcon class="w-6 h-6" />
         </NuxtLink>
-        <NuxtLink to="/notifications" class="hover:text-red-600">
+        <NuxtLink to="/notifications" class="hover:text-red-400">
           <BellIcon class="w-6 h-6" />
         </NuxtLink>
-        <NuxtLink to="/profile" class="hover:text-red-600">
+        <NuxtLink to="/profile" class="hover:text-red-400">
           <UserIcon class="w-6 h-6" />
         </NuxtLink>
       </div>
@@ -58,7 +58,6 @@
     <!-- New Arrivals Section -->
     <section class="max-w-7xl mx-auto px-4 py-12 grid grid-cols-1 lg:grid-cols-3 gap-8">
       <div>
-        <!-- 👇 Login link removed here -->
         <h1 class="text-2xl sm:text-3xl font-bold mt-2">DISCOVER THE NEW ARRIVALS</h1>
         <p class="mt-4 text-gray-700 text-sm sm:text-base">
           Exciting news for students! Our library has recently added a wide variety of new books covering urban planning, 

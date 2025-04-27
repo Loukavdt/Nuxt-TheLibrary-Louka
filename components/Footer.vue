@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- Footer -->
-    <footer class="bg-red-600 text-white text-center py-5">
+    <footer class="bg-gradient-to-r from-[#1A2E74] to-[#0aa044] text-white text-center py-5">
       <p class="text-sm md:text-base">Rue des Palais 70, 1030 Brussels | Sint-Lukas@gmail.com</p>
       <div class="mt-2 text-xs md:text-sm">
         <NuxtLink to="/privacypolicy" class="hover:underline">Privacy policy</NuxtLink> |
@@ -19,19 +19,15 @@ footer {
 }
 
 footer .text-sm {
-  font-size: 0.875rem; /* Smaller text on mobile */
+  font-size: 0.875rem;
 }
 
 footer .text-base {
-  font-size: 1rem; /* Regular size on desktop */
+  font-size: 1rem;
 }
 
 footer .text-xs {
-  font-size: 0.75rem; /* Smaller links on mobile */
-}
-
-footer .text-sm {
-  font-size: 0.875rem; /* Slightly larger links on desktop */
+  font-size: 0.75rem;
 }
 
 footer a {
@@ -40,7 +36,7 @@ footer a {
 }
 
 footer a:hover {
-  text-decoration: underline; /* Underline on hover */
+  text-decoration: underline;
 }
 
 /* Mobile first, larger text on bigger screens */
